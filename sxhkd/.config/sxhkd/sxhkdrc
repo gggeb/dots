@@ -1,0 +1,89 @@
+# reload sxhkd
+alt + shift + r
+    pkill -USR1 -x sxhkd
+
+## launchers
+# launch terminal
+alt + Return
+    st
+
+# launch menu
+alt + d
+    menu
+
+# media keys
+XF86AudioRaiseVolume
+    volset +5%
+XF86AudioLowerVolume
+    volset -5%
+XF86AudioMute
+    volset toggle
+XF86MonBrightnessUp
+    xbacklight -inc 20
+XF86MonBrightnessDown
+    xbacklight -dec 20
+
+## bspwm
+# exit bspwm
+alt + shift + Escape
+    bspc quit
+
+# reload bspwm config
+alt + r
+    ~/.config/bspwm/config
+
+# close/kill node
+alt + {_,shift + }q
+    bspc node -{k,c}
+
+# switch mode
+alt + m
+    bspc desktop -l next
+
+# swap current node for largest
+alt + g
+    bspc node -s biggest.local
+
+# set the current node's state
+alt + {t,shift + t,s,f}
+    bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# set the current node's flags
+alt + ctrl + {m,x,y,z}
+    bspc node -g {marked,locked,sticky,private}
+
+# focus/shift node in direction
+alt + {_,shift + }{Up,Right,Down,Left}
+    bspc node -{f,s} {north,east,south,west}
+
+# focus next/previous node in desktop
+alt + {_,shift + }Tab
+    bspc node @/ -f {next,prev}.local
+
+# focus previous/next desktop in monitor
+alt + bracket{left,right}
+    bspc desktop -f {prev,next}.local
+
+# focus/send to desktop
+alt + {_,shift + }{1-9,0}
+    bspc {desktop -f,node -d} "^{1-9,10}"
+
+# preselect in direction
+alt + ctrl + {Up,Right,Down,Left}
+    bspc node -p {north,east,south,west}
+
+# preselect ratio
+alt + ctrl + {1-9}
+    bspc node -o 0.{1-9}
+
+# cancel preselection
+alt + ctrl + space
+    bspc node -p cancel
+
+# expand node from edge
+super + {Up,Right,Down,Left}
+    bspc node -z {top 0 -20,right 20 0,bottom 0 20,left -20 0}
+
+# contract node at edge
+super + shift + {Up,Right,Down,Left}
+    bspc node -z {top 0 20,right -20 0,bottom 0 -20,left 20 0}

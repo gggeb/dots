@@ -1,0 +1,9 @@
+#!/bin/sh
+
+export THEME_FONT=curie
+export THEME_FONT_SIZE=10
+export THEME_FONT_PIXELSIZE=12
+
+export THEME_BORDER_WIDTH=2
+
+. "${ESC}HOME/.colours"

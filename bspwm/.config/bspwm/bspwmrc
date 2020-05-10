@@ -1,0 +1,9 @@
+#!/bin/sh
+#
+# bspwmrc
+
+# autostart programs
+~/.config/bspwm/autostart
+
+# configure bspwm
+~/.config/bspwm/config

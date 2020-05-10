@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+# autostart
+
+picom -b
+hsetroot -tile ~/.wall.png
+
+redshift &
+
+sxhkd &

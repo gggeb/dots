@@ -1,0 +1,3 @@
+# sh environment
+
+exec fish

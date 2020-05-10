@@ -1,0 +1,13 @@
+#!/bin/sh
+
+export CS_BLACK='050504'
+export CS_GREY='403e37'
+export CS_LIGHT_GREY='bfbaa6'
+export CS_WHITE='fff8dc'
+
+export CS_RED='ff8c00'
+export CS_GREEN='7fff00'
+export CS_YELLOW='ffd700'
+export CS_BLUE='9932cc'
+export CS_MAGENTA='ff69b4'
+export CS_CYAN='6495ed'
