@@ -8,3 +8,5 @@ hsetroot -tile ~/.wall.png
 redshift &
 
 sxhkd &
+
+notify-send -u low "BSPWM BEGUN"

@@ -50,8 +50,8 @@ static const char *colorname[] = {
 	"#$CS_MAGENTA",
 	"#$CS_CYAN",
 	"#$CS_WHITE",
-	
-    [255] = 0,
+
+	[255] = 0,
 };
 
 unsigned int defaultfg = 7;
@@ -74,7 +74,7 @@ static uint forcemousemod = ShiftMask;
 
 static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
-//	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
+	//	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
 	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
 	{ XK_ANY_MOD,           Button5, ttysend,        {.s = "\005"} },
 };
@@ -320,6 +320,6 @@ static uint selmasks[] = {
 };
 
 static char ascii_printable[] =
-	" !\"#$%&'()*+,-./0123456789:;<=>?"
-	"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
-	"`abcdefghijklmnopqrstuvwxyz{|}~";
+" !\"#$%&'()*+,-./0123456789:;<=>?"
+"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
+"`abcdefghijklmnopqrstuvwxyz{|}~";

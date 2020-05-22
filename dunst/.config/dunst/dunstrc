@@ -1,0 +1,86 @@
+[global]
+follow = mouse
+
+geometry = "192x4-32+32"
+
+indicate_hidden = yes
+shrink = no
+
+notification_height = 0
+separator_height = 1
+
+padding = 24
+horizontal_padding = 0
+
+frame_width = $THEME_BORDER_WIDTH
+frame_color = "#$CS_GREY"
+separator_color = frame
+
+sort = yes
+
+idle_threshold = 120
+
+font = $THEME_FONT $THEME_FONT_SIZE
+line_height = 0
+markup = full
+
+format = "%s\n%b"
+alignment = center
+
+show_age_threshold = -1
+
+word_wrap = no
+ellipsize = end
+
+ignore_newline = yes
+
+stack_duplicates = true
+hide_duplicate_count = true
+
+show_indicators = yes
+
+sticky_history = yes
+history_length = 20
+
+dmenu = /home/geb/.local/bin/dmenu -p dunst:
+browser = /usr/bin/firefox -new-tab
+
+always_run_script = true
+
+title = Dunst
+class = Dunst
+
+startup_notification = false
+
+verbosity = mesg
+
+corner_radius = 0
+
+mouse_left_click = close_current
+mouse_middle_click = do_action
+mouse_right_click = close_all
+
+[shortcuts]
+close = ctrl+space
+close_all = ctrl+shift+space
+
+history = ctrl+grave
+
+context = ctrl+shift+period
+
+[urgency_low]
+background = "#$CS_BLACK"
+foreground = "#$CS_GREY"
+timeout = 2
+
+[urgency_normal]
+background = "#$CS_LIGHT_GREY"
+foreground = "#$CS_BLACK"
+timeout = 4
+
+[urgency_critical]
+background = "#$CS_BLUE"
+foreground = "#$CS_BLACK"
+timeout = 8
+
+# vim: ft=cfg
